@@ -1,0 +1,243 @@
+<!doctype html>
+
+<html>
+
+ <head>
+ 
+  <meta charset="utf-8">
+ 
+    <style>
+
+      
+     body{
+    background:#fff;
+  }
+
+  
+  form{
+    
+  
+ margin:100px;
+  font-size:35px;
+  font-weight:bold;
+  }
+ 
+   
+ header{
+      font-size:50px;
+   
+   
+  }
+ 
+ div{
+  background-size:cover;
+  align-items:center;
+  justify-content:center;
+  display:flex;
+  }
+     
+ 
+      </style>
+ 
+ <title>sports</title> 
+
+  <link rel="stylesheet" type="texts/css" href="style.css">
+ 
+  <script>
+
+       function validate1(){
+  
+        
+         var text1=document.getElementById("text1").value;
+ 
+        var regx1= /^([a-z0-9\.-]+)@([a-z0-9-]+).([a-z]{2,8})$/;
+ 
+        
+           
+         
+           
+         
+          if(regx1.test(text1)){
+       
+     
+               document.getElementById("lbtext1").innerHTMl="true"; 
+
+               document.getElementById("lbtext1").style.visibility="visible";
+
+               document.getElementById("lbtext1").style.color="green";
+
+          }
+          
+          else{
+       
+      document.getElementById("lbtext1").innerHTML="false";
+
+             document.getElementById("lbtext1").style.visibility="visible";
+   
+          document.getElementById("lbtext1").style.color="red";
+    
+      }
+        
+        
+       
+ }
+        
+        
+
+        
+        
+        function validate2(){
+ 
+         
+         var text2=document.getElementById("text2").value;
+
+         var regx2= /[0][1]\d{9}/;
+
+           
+         
+         
+         
+         
+          if(regx2.test(text2)){
+ 
+           
+               document.getElementById("lbtext2").innerHTMl="true"; 
+  
+             document.getElementById("lbtext2").style.visibility="visible";
+
+               document.getElementById("lbtext2").style.color="green";
+
+          }
+          
+ 
+         else{
+       
+      document.getElementById("lbtext2").innerHTML="false";
+          
+   document.getElementById("lbtext2").style.visibility="visible";
+     
+        document.getElementById("lbtext2").style.color="red";
+
+          }
+      
+    }
+   
+       
+          function validate3(){
+    
+      
+         var text3=document.getElementById("text3").value;
+  
+       var regx3= /^[A-Z][a-z0-9]{7}$/;
+      
+     
+         
+         
+           
+         
+           
+         
+          if(regx3.test(text3)){
+     
+       
+               document.getElementById("lbtext3").innerHTMl="true"; 
+   
+            document.getElementById("lbtext3").style.visibility="visible";
+
+               document.getElementById("lbtext3").style.color="green";
+   
+       }
+          
+          else{
+       
+      document.getElementById("lbtext3").innerHTML="false";
+       
+      document.getElementById("lbtext3").style.visibility="visible";
+      
+       document.getElementById("lbtext3").style.color="red";
+     
+     }
+          
+          
+          
+          }
+          
+          
+        </script>
+ 
+ </head> 
+
+ <body> 
+
+  <div class="content"> 
+ 
+  <header>
+     welcome to website 
+   </header> 
+ 
+  <form action="page.html">
+   
+  E-maill: 
+    <input id=" text1" placeholder="Email" type="text"> 
+    
+<br>
+ 
+    <label id="lbtext1" style="color: red; visibility:hidden"> </label> 
+
+    <br>
+ cell phone: 
+    <input id="text2" placeholder="phone" type="text"> 
+  
+  <br> 
+
+    <label id="lbtext2" style="color: red; visibility:hidden"> </label> 
+    
+<br>
+ password: 
+    <input id="text3" placeholder="password" type="password"> 
+ 
+   <br> 
+
+    <label id="lbtext3" style="color: red; visibility:hidden"> </label> 
+ 
+   <br> 
+first name: 
+    <input id="text4" placeholder="first name" type="text"> 
+ 
+   <br> 
+
+    <br>
+ last name: 
+    <input id="text5" placeholder="last name" type="text"> 
+ 
+   <br> 
+
+    <br> 
+adress: 
+    <input id="text6" placeholder="address" type="text"> 
+    
+<br> 
+ 
+   <br>
+ 
+    <label> <input type="radio" value="female" name="gender"> female
+ <span></span>
+ </label> 
+   
+ <label> <input type="radio" value="male" name="gender"> male 
+<span></span> 
+</label> 
+ 
+   <br> 
+ 
+   <br> 
+
+    <button onclick="validate1() ; validate2() ; validate3()" type="button">submit</button> 
+ 
+  </form> 
+
+  </div> 
+
+ </body>
+
+</html>
